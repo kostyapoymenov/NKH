@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  max-width: rem(1170px);
+  margin: 0 auto;
+  position: relative;
+}
+section {
+  width: 100%;
+  position: relative;
+}
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  @include font-size(18px);
+  transition: all 0.3s ease-out;
+  outline:none;
+}

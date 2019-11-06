@@ -1,0 +1,74 @@
+extends ../loyout
+
+block variables
+    - var title= "Новый проект"
+block content
+    section.hero
+        .menu
+            button(type="button") Весь сайт
+            .menu__block
+                ul.menu__list
+                    li.menu__item
+                        a.menu__link(href="#") О компании
+                    li.menu__item
+                        a.menu__link(href="#") Отзывы
+                    li.menu__item
+                        a.menu__link(href="#") Вакансии
+                    li.menu__item
+                        a.menu__link(href="#") Контакты
+            .menu__block
+                ul.menu__list
+                    li.menu__item
+                        a.menu__link(href="#") Услуги
+                    li.menu__item
+                        a.menu__link(href="#") Инструкции
+                    li.menu__item
+                        a.menu__link(href="#") Документы
+                    li.menu__item
+                        a.menu__link(href="#") Тарифы
+            .menu__block
+                ul.menu__list
+                    li.menu__item
+                        a.menu__link(href="#") Личный кабинет
+                    li.menu__item
+                        a.menu__link(href="#") Подключиться
+                    li.menu__item
+                        a.menu__link(href="#") Техподдержка
+                    li.menu__item
+                        a.menu__link(href="#") База знаний
+            .menu__block
+                ul.menu__list
+                    li.menu__item
+                        a.menu__link(href="tel:+79285066700") +7 (928) 506-67-00
+                    li.menu__item
+                        a.menu__link(href="#") Задать вопрос
+            button.btn(type="button") Нравится
+        aside.aside
+            .aside__logo   
+                a.logo(href="#")
+            .aside__block
+                .block__one
+                .block__two
+                .block__three
+        .main  
+            .main__top
+                .burger
+                ul.list
+                    li.list__item О компании 
+                    li.list__item Техподдержка
+                    li.list__item Подключиться
+            h1.main__title Безлимитный интернет
+                span.big-text DN-650 за 500 руб/мес
+                span.small-text Скорость входящего/исходящего канала, Кбит/с днем 14000,ночью 20000
+            a.btn(href="#") Подключиться 
+        .slider
+            .slider__block
+                .card
+                .card
+                .card-horize
+            .slider__block
+                .card
+                .card
+                .card
+                .card
+        .grey
