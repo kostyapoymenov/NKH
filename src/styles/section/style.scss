@@ -17,14 +17,59 @@
 .aside__logo {
   padding: 30px 30px 15px;
 }
-.acord_block {
+.acord {
+  height: 395px;
+  .acord__block--one {
+    transform: translateY(0);
+    transition: all .5s ease;
+    z-index: 10;
+  }
+  .acord__block--two {
+    height: 198px;
+    transition: all .5s ease;
+    z-index: 5;
+    transform: translateY(0px);
+  }
+  .acord__block--three {
+    transform: translateY(0px);
+    z-index: 10;
+    transition: all .5s ease;
+  }
+  &--active {
+    .acord__block--one {
+      transform: translateY(110px);
+      transition: all .5s ease;
+    }
+    .acord__block--two {
+      animation: asideHide 500ms 1 ease;
+      transition: all .5s ease;
+      height: 0;
+      transform: translateY(110px);
+    }
+    .acord__block--three {
+      transform: translateY(110px);
+      transition: all .5s ease;
+    }
+  } 
+}
+@keyframes asideHide {
+  from {
+    transform: translateY(0);
+    height:395px;
+  }
+  to {
+    transform: translateY(110px);
+    height:0;
+  }
+}
+.acord__block {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 18px;
   text-align: center;
 }
-.acord_block--one {
+.acord__block--one {
   height: 85px;
   background-color: #37b1a8;
   font-size: 18px;
@@ -35,7 +80,7 @@
   letter-spacing: -0.5px;
   color: #ffffff;
 }
-.acord_block--two {
+.acord__block--two {
   background-color: #1da197;
   height: 198px;
 }
@@ -48,7 +93,7 @@
   letter-spacing: -0.39px;
   color: $white;
  }
- .acord_block--three {
+ .acord__block--three {
   height: 112px;
   background-color: #1c5394;
   font-size: 18px;
@@ -204,7 +249,7 @@
 }
 .menu__link {
   margin-bottom: 20px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
   color: #030303;
   display: inline-block;

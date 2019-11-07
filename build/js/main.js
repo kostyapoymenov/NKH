@@ -19,3 +19,7 @@ $('.menu__btn-back').on('click', function(e){
   }, 200);
   $('.menu__content').removeClass('menu__content--visible');
 })
+$('.acord__block--one').on('click', function(){
+  // $('.acord__block--two').slideToggle(500);
+  $('.acord').toggleClass('acord--active');
+});
