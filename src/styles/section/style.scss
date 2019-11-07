@@ -12,6 +12,7 @@
   background-color: $white;
   box-shadow: 1px 0 14px 0 rgba(0, 0, 0, 0.2);
   height: 100%;
+  z-index: 140;
 }
 .aside__logo {
   padding: 30px 30px 15px;
@@ -63,6 +64,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding: 30px 35px;
+  position: relative;
 }
 .main__top {
   display: flex;
@@ -118,4 +120,185 @@
 }
 .main__title_span {
   display: block;
+}
+.menu {
+  background-color: #cccccc;
+  color: #181818;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 620px;
+  height: 100%;
+  box-shadow: 1px 0 14px 0 rgba(0, 0, 0, 0.2);
+  transform: translateX(-103%);
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+  z-index: 30;
+  pointer-events: auto;
+  transition: all 500ms ease;
+  &--visible {
+    transform: translateX(0%);
+    transition: all 500ms ease;
+  }
+}
+.btn--back {
+  color: $white;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: none;
+  &:before {
+    content:"";
+    position: absolute;
+    right: 0;
+    top: calc(50% - 16.5px);
+    width: 32.9px;
+    height: 32.9px;
+    background-color: rgba(28, 83, 148, 0.47);
+    border-radius: 50%;
+    background-image: url(../images/icons/arrow.PNG);
+    background-repeat: no-repeat;
+    background-size: 14px 12px;
+    background-position: center;
+}
+.slider {
+  width: 960px;
+  background-color: #f0f1f2;
+}
+.slider__wrap {
+  padding: 17.6px 0 0 18px;
+}
+.slider__block {
+  display: flex;
+  flex-wrap: wrap;
+  .card:nth-child(odd){
+    margin-right: 15px;
+  }
+}
+.card {
+  min-height: 410px;
+  max-width: 410px;
+  flex: 1 1 410px;
+  margin-bottom: 15px;
+}
+.card-promo__pic {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 56%;
+}
+.card-promo__content {
+  height: 44%;
+  background-color: $white;
+  padding: 37px 43px 17px;
+  p {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #4a4a4a;
+    margin-bottom: 24px;
+  }
+}
+.date {
+  font-size: 12px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.86px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.3);
+}
+.card-news {
+  background-color: #1c5394;
+  padding: 28px 0;
+}
+.card-news__date {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  color: $white;
+  margin-bottom: 40px;
+}
+.card-news__content {
+  padding: 0 30px;
+  margin-bottom: 47px;
+  p {
+    font-size: 28px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: center;
+    color: $white;
+  }
+}
+.card-map {
+  background-color: #e9e5dc;
+  max-width: 836px;
+  position: relative;
+}
+.card-map__adres {
+  background-color: $white;
+  width: 391px;
+  height: 251px;
+  position: absolute;
+  top: 24px;
+  left: 21px;
+}
+.card-map__adres_top {
+  width: 100%;
+  height: 53.9px;
+  border-bottom: 2px solid #eaeaea;
+}
+.card-map__adres_bottom {
+  width: 100%;
+}
+.card--orange {
+  background-color: #f4c22d;
+}
+.card--beige{
+  background-color: #fdf2d2;
+}
+.card--light-beige{
+  background-color: #f4f7e6;
+}
+.card--brown{
+  background-color: #666841;
+}
+.owl-nav {
+  width: 109px;
+  position: absolute;
+  top: 0;
+  right:0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f1f2;
+}
+.owl-prev {
+  display: none;
+}
+.owl-next {
+  z-index: 20;
+}
+.owl-next {
+  height: 60.4px;
+  width: 60.4px;
+  border-radius: 50%;
+  background-color: $white;
+  span {
+    content:"";
+    position: absolute;
+    right: calc(50% - 12px);
+    top: calc(50% - 10.5px);
+    height: 21px;
+    width: 24px;
+    background-image: url(../images/icons/arrow-blue.png);
+    background-repeat: no-repeat;
+    background-size: 24px 21px;
+    background-position: center;
+  }
 }
