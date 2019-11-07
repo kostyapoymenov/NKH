@@ -127,6 +127,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  padding: 22px 30px;
   width: 620px;
   height: 100%;
   box-shadow: 1px 0 14px 0 rgba(0, 0, 0, 0.2);
@@ -136,30 +137,55 @@
   will-change: transform;
   z-index: 30;
   pointer-events: auto;
-  transition: all 500ms ease;
+  transition: all 600ms ease;
   &--visible {
     transform: translateX(0%);
-    transition: all 500ms ease;
+    transition: all 600ms ease;
   }
 }
-.btn--back {
+.menu__btn-back {
   color: $white;
-  font-weight: 700;
-  font-size: 24px;
+  font-weight: 500;
+  font-size: 22px;
   text-transform: none;
+  position: relative;
+  padding-left: 55px;
+  margin-bottom: 85px;
   &:before {
     content:"";
     position: absolute;
-    right: 0;
-    top: calc(50% - 16.5px);
-    width: 32.9px;
-    height: 32.9px;
-    background-color: rgba(28, 83, 148, 0.47);
-    border-radius: 50%;
-    background-image: url(../images/icons/arrow.PNG);
+    left: 0;
+    top: calc(50% - 10px);
+    height: 20px;
+    width: 30px;
+    background-image: url(../images/icons/arrow-white-left.png);
     background-repeat: no-repeat;
-    background-size: 14px 12px;
+    background-size: 100%;
     background-position: center;
+  }
+}
+.menu__block {
+  display: flex;
+  margin-bottom: 40px;
+}
+.menu__list {
+  width: 50%;
+  padding-right: 20px;
+}
+.menu__link {
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #030303;
+}
+.like-vk {
+  background-color: #426b99;
+  display: flex;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
 }
 .slider {
   width: 960px;
