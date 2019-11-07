@@ -46,24 +46,35 @@ block content
         aside.aside
             .aside__logo   
                 a.logo(href="#")
-            .aside__block
-                .block__one
-                .block__two
-                .block__three
-        .main  
-            .main__top
-                .burger
-                ul.list
-                    li.list__item
-                        a.list__item_link(href="#") О компании 
-                    li.list__item
-                        a.list__item_link(href="#") Техподдержка
-                    li.list__item
-                        a.list__item_link(href="#") Подключиться
-            h1.main__title Безлимитный интернет
-                span.big-text DN-650 за 500 руб/мес
-                span.small-text Скорость входящего/исходящего канала, Кбит/с днем 14000,ночью 20000
-            a.btn(href="#") Подключиться 
+                    img.logo__img(src="images/content/logo.png", alt="")
+            .acord
+                .acord_block.acord_block--one Для дома
+                .acord_block.acord_block--two
+                    ul.aside-list
+                        li.aside-list__item Услуги 
+                        li.aside-list__item Инструменты
+                        li.aside-list__item Документы
+                        li.aside-list__item Тарифы
+                .acord_block.acord_block--three Для бизнеса
+        .main
+            .main-cntent  
+                .main__top
+                    .burger
+                        .burger__line.burger__line--1
+                        .burger__line.burger__line--2
+                        .burger__line.burger__line--3
+                    ul.nav-list
+                        li.nav-list__item
+                            a.nav-list__item_link(href="#") О компании 
+                        li.nav-list__item
+                            a.nav-list__item_link(href="#") Техподдержка
+                        li.nav-list__item
+                            a.nav-list__item_link(href="#") Подключиться
+                h1.main__title 
+                    span.main__title_span.light-24 Безлимитный интернет
+                    span.main__title_span.medium-65 DN-650 за 500 руб/мес
+                    span.main__title_span.regular-14 Скорость входящего/исходящего канала, Кбит/с днем 14000, ночью 20000
+                a.btn(href="#") Подключиться 
         .slider
             .slifer__wrap
                 .slider__block

@@ -1,0 +1,121 @@
+.hero {
+  height: 1000px;
+  width: 1570px;
+  position: relative;
+  display: flex;
+}
+.menu {
+  display: none;
+}
+.aside {
+  width: 112px;
+  background-color: $white;
+  box-shadow: 1px 0 14px 0 rgba(0, 0, 0, 0.2);
+  height: 100%;
+}
+.aside__logo {
+  padding: 30px 30px 15px;
+}
+.acord_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.acord_block--one {
+  height: 85px;
+  background-color: #37b1a8;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+.acord_block--two {
+  background-color: #1da197;
+  height: 198px;
+}
+.aside-list__item {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: -0.39px;
+  color: $white;
+ }
+ .acord_block--three {
+  height: 112px;
+  background-color: #1c5394;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: -0.5px;
+  text-align: center;
+  color: $white;
+}
+.main {
+  width: 498px;
+  background-image: url(../images/content/girl.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 35px;
+}
+.main__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 65px;
+}
+.burger {
+  display: block;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+  &__line {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    background: $white;
+    pointer-events: none;
+    &--1 {
+      top: 0;
+    }
+    &--2 {
+      top: 8px;
+    }
+    &--3 {
+      top: 16px;
+    }
+  }
+}
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 20px;  
+  &__item_link {
+    font-size: 17px;
+    font-weight: 400;
+  }
+}
+.main__title {
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 0;
+  color: $white;
+  margin-bottom: 29px;
+  .medium-65 {
+    margin-bottom: 15px;
+  }
+  .light-24 {
+    margin-bottom: 5px;
+  }
+}
+.main__title_span {
+  display: block;
+}

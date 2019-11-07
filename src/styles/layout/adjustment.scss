@@ -11,7 +11,37 @@ section {
 .btn {
   display: inline-block;
   font-weight: 500;
-  @include font-size(18px);
-  transition: all 0.3s ease-out;
+  font-size: 15px;
+  text-transform: uppercase;
   outline:none;
+  position: relative;
+  padding-right: 43px;
+  &:after {
+    content:"";
+    position: absolute;
+    right: 0;
+    top: calc(50% - 16.5px);
+    width: 32.9px;
+    height: 32.9px;
+    background-color: rgba(28, 83, 148, 0.47);
+    border-radius: 50%;
+    background-image: url(../images/icons/arrow.PNG);
+    background-repeat: no-repeat;
+    background-size: 14px 12px;
+    background-position: center;
+  }
+}
+.medium-65 {
+  font-weight: 500;
+  font-size: 65px;
+  line-height: 68px;
+}
+.regular-14 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+.light-24 {
+  font-weight: 300;
+  font-size: 24px;
 }
