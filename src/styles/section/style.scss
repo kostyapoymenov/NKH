@@ -107,11 +107,37 @@
 }
 .main {
   width: 498px;
-  background-image: url(../images/content/girl.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+}
+.main-wrap {
+  height: 100%;
   padding: 30px 34.5px 30px 29.5px;
   position: relative;
+  overflow: hidden;
+  transition: all .3s ease;
+  &:before {
+    content: '';
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-image: url(../images/content/girl.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: all .3s ease;
+    transform: scale(1);
+  }
+  &:hover {
+    .main-content {
+      transform: translateY(-15px);
+      transition: all .3s ease;
+    }
+    &:before {
+      transform: scale(1.1);
+      transition: all .3s ease;
+    }
+  }
 }
 .main__top {
   display: flex;
@@ -152,6 +178,10 @@
     font-weight: 400;
   }
 }
+.main-content {
+  transform: translateY(0);
+  transition: all .3s ease;
+}
 .main__title {
   font-weight: 300;
   font-size: 24px;
@@ -174,7 +204,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 22px 30px;
+  padding: 110px 30px 22px;
   width: 620px;
   height: 100%;
   box-shadow: 1px 0 14px 0 rgba(0, 0, 0, 0.2);
@@ -190,14 +220,19 @@
     transition: all 600ms ease;
   }
 }
-.menu__btn-back {
+.menu__btn-back {    
+  position: absolute;
+  top: 25px;
+  left: 28px;
+  min-width: 200px;
   color: $white;
   font-weight: 500;
   font-size: 22px;
   text-transform: none;
-  position: relative;
   padding-left: 55px;
-  margin-bottom: 85px;
+  opacity: 0;
+  z-index: -100;
+  transition: all 300ms ease;
   &:before {
     content:"";
     position: absolute;
@@ -209,6 +244,11 @@
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
+  }
+  &--visible {
+    opacity: 1;
+    z-index: 40;
+    transition: all 300ms ease;
   }
 }
 .menu__content {
@@ -301,16 +341,36 @@
   max-width: 410px;
   flex: 1 1 410px;
   margin-bottom: 15px;
+  overflow: hidden;
+}
+.card-promo {
+  transform: translateX(1000px);
+  transition: all 1s ease;
+  &:hover {
+    .card-promo__pic {
+      transition: all .3s ease;
+      transform: scale(1.1);
+    }
+    .card-promo__content {
+      transition: all .3s ease;
+      height: 50%;
+      transform: translateY(-25px);
+    }
+  }
 }
 .card-promo__pic {
   background-repeat: no-repeat;
   background-size: cover;
   height: 56%;
+  transition: all .3s ease;
+  z-index: 5;
 }
 .card-promo__content {
   height: 44%;
   background-color: $white;
   padding: 37px 43px 17px;
+  z-index: 6;
+  transition: all .3s ease;
   p {
     font-weight: 700;
     font-size: 24px;
@@ -332,6 +392,8 @@
 .card-news {
   background-color: #1c5394;
   padding: 28px 0;
+  transform: translateX(2000px);
+  transition: all 1.3s ease;
 }
 .card-news__date {
   font-size: 14px;
@@ -359,6 +421,8 @@
   background-color: #e9e5dc;
   max-width: 836px;
   position: relative;
+  transform: translateX(1000px);
+  transition: all .7s ease;
 }
 .card-map__adres {
   background-color: $white;
@@ -378,15 +442,57 @@
 }
 .card--orange {
   background-color: #f4c22d;
+  transform: translateX(1000px);
+  transition: all .9s ease;
 }
 .card--beige{
   background-color: #fdf2d2;
+  transform: translateX(1000px);
+  transition: all 1.1s ease;
 }
 .card--light-beige{
-  background-color: #f4f7e6;
+  // background-color: #f4f7e6;
+  background-color: #00a8ff;
+  transform: translateX(1000px);
+  transition: all .7s ease;
 }
 .card--brown{
   background-color: #666841;
+  transform: translateX(1000px);
+  transition: all 1.2s ease;
+}
+.owl-item {
+  overflow: hidden;
+  &.active {
+    .card-promo {
+      transform: translateX(0px);
+      transition: all 1s ease-in-out;
+    }
+    .card-news {
+      transform: translateX(0px);
+      transition: all 1.3s ease-in-out;
+    }
+    .card-map {
+      transform: translateX(0px);
+      transition: all .7s ease-in-out;
+    }
+    .card--orange {
+      transform: translateX(0px);
+      transition: all .9s ease-in-out;
+    }
+    .card--beige {
+      transform: translateX(0px);
+      transition: all 1.1s ease-in-out;
+    }
+    .card--light-beige {
+      transform: translateX(0px);
+      transition: all .7s ease-in-out;
+    }
+    .card--brown {
+      transform: translateX(0px);
+      transition: all 1.2s ease;
+    }
+  }
 }
 .owl-nav {
   width: 109px;
