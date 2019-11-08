@@ -344,7 +344,7 @@
   overflow: hidden;
 }
 .card-promo {
-  transform: translateX(1000px);
+  // transform: translateX(1000px);
   transition: all 1s ease;
   &:hover {
     .card-promo__pic {
@@ -392,7 +392,7 @@
 .card-news {
   background-color: #1c5394;
   padding: 28px 0;
-  transform: translateX(2000px);
+  // transform: translateX(2000px);
   transition: all 1.3s ease;
 }
 .card-news__date {
@@ -421,7 +421,7 @@
   background-color: #e9e5dc;
   max-width: 836px;
   position: relative;
-  transform: translateX(1000px);
+  // transform: translateX(1000px);
   transition: all .7s ease;
 }
 .card-map__adres {
@@ -442,18 +442,18 @@
 }
 .card--orange {
   background-color: #f4c22d;
-  transform: translateX(1000px);
+  // transform: translateX(1000px);
   transition: all .9s ease;
 }
 .card--beige{
   background-color: #fdf2d2;
-  transform: translateX(1000px);
+  // transform: translateX(1000px);
   transition: all 1.1s ease;
 }
 .card--light-beige{
   // background-color: #f4f7e6;
   background-color: #00a8ff;
-  transform: translateX(1000px);
+  // transform: translateX(1000px);
   transition: all .7s ease;
 }
 .card--brown{
@@ -463,6 +463,7 @@
 }
 .owl-item {
   overflow: hidden;
+  position: relative;
   &.active {
     .card-promo {
       transform: translateX(0px);
