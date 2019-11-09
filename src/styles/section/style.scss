@@ -326,12 +326,10 @@
   width: 960px;
   background-color: #f0f1f2;
 }
-.slider__wrap {
-  padding: 17.6px 0 0 18px;
-}
 .slider__block {
   display: flex;
   flex-wrap: wrap;
+  padding: 17.6px 0 0 18px;
   .card:nth-child(odd){
     margin-right: 15px;
   }
@@ -344,7 +342,7 @@
   overflow: hidden;
 }
 .card-promo {
-  // transform: translateX(1000px);
+  transform: translateX(1000px);
   transition: all 1s ease;
   &:hover {
     .card-promo__pic {
@@ -448,7 +446,7 @@
 .card--beige{
   background-color: #fdf2d2;
   transform: translateX(1000px);
-  transition: all 1.1s ease;
+  transition: all 1s ease;
 }
 .card--light-beige{
   // background-color: #f4f7e6;
@@ -459,7 +457,7 @@
 .card--brown{
   background-color: #666841;
   transform: translateX(1000px);
-  transition: all 1.2s ease;
+  transition: all 1.6s ease;
 }
 .owl-item {
   overflow: hidden;
@@ -479,19 +477,19 @@
     }
     .card--orange {
       transform: translateX(0px);
-      transition: all .9s ease-in-out;
+      transition: all .6s ease-in-out;
     }
     .card--beige {
       transform: translateX(0px);
-      transition: all 1.1s ease-in-out;
+      transition: all .8s ease-in-out;
     }
     .card--light-beige {
       transform: translateX(0px);
-      transition: all .7s ease-in-out;
+      transition: all .4s ease-in-out;
     }
     .card--brown {
       transform: translateX(0px);
-      transition: all 1.2s ease;
+      transition: all 1s ease;
     }
   }
   &.dop {
@@ -505,16 +503,20 @@
       transform: translateX(-1000px);
     }
     .card--orange {
-      transform: translateX(-1000px);
+      transform: translateX(-1200px);
+      transition: all .6s ease;
     }
     .card--beige{
-      transform: translateX(-1000px);
+      transform: translateX(-1200px);
+      transition: all 0.8s ease;
     }
     .card--light-beige{
-      transform: translateX(-1000px);
+      transform: translateX(-1200px);
+      transition: all .4s ease;
     }
     .card--brown{
-      transform: translateX(-1000px);
+      transform: translateX(-1200px);
+      transition: all 1s ease;
     }
   }
 }
