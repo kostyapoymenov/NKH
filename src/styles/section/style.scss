@@ -53,16 +53,6 @@
     }
   } 
 }
-@keyframes asideHide {
-  from {
-    transform: translateY(0);
-    height:198px;
-  }
-  to {
-    transform: translateY(110px);
-    height:0;
-  }
-}
 .acord__block {
   display: flex;
   align-items: center;
@@ -222,7 +212,7 @@
     transition: all 600ms ease;
   }
 }
-.menu__btn-back {    
+.menu__btn-back {
   position: absolute;
   top: 25px;
   left: 28px;
@@ -259,26 +249,6 @@
   &--visible {
     animation: menuContentShow 300ms 1 ease;
     opacity: 1;
-  }
-}
-@keyframes menuContentShow {
-  from {
-    opacity: 0;
-    transform: translateY(10%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes menuContentHide {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(10%);
   }
 }
 .menu__block {
@@ -590,4 +560,34 @@
 }
 .carousel_wrap span.prev:hover {
   background-position:0 -26px;
+}
+@keyframes asideHide {
+  from {
+    transform: translateY(0);
+    height:198px;
+  }
+  to {
+    transform: translateY(110px);
+    height:0;
+  }
+}
+@keyframes menuContentShow {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes menuContentHide {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10%);
+  }
 }
