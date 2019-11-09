@@ -108,6 +108,7 @@
 .main {
   width: 498px;
   position: relative;
+  z-index: 20;
 }
 .main-wrap {
   height: 100%;
@@ -325,6 +326,7 @@
 .slider {
   width: 960px;
   background-color: #f0f1f2;
+  z-index: 10;
 }
 .slider__block {
   display: flex;
@@ -342,7 +344,7 @@
   overflow: hidden;
 }
 .card-promo {
-  transform: translateX(1000px);
+  // transform: translateX(1000px);
   transition: all 1s ease;
   &:hover {
     .card-promo__pic {
@@ -390,7 +392,7 @@
 .card-news {
   background-color: #1c5394;
   padding: 28px 0;
-  transform: translateX(2000px);
+  // transform: translateX(2000px);
   transition: all 1.3s ease;
 }
 .card-news__date {
@@ -419,7 +421,7 @@
   background-color: #e9e5dc;
   max-width: 836px;
   position: relative;
-  transform: translateX(1000px);
+  // transform: translateX(1000px);
   transition: all .7s ease;
 }
 .card-map__adres {
@@ -440,23 +442,23 @@
 }
 .card--orange {
   background-color: #f4c22d;
-  transform: translateX(1000px);
+  // transform: translateX(1000px);
   transition: all .9s ease;
 }
 .card--beige{
   background-color: #fdf2d2;
-  transform: translateX(1000px);
+  // transform: translateX(1000px);
   transition: all 1s ease;
 }
 .card--light-beige{
   // background-color: #f4f7e6;
   background-color: #00a8ff;
-  transform: translateX(1000px);
+  // transform: translateX(1000px);
   transition: all .7s ease;
 }
 .card--brown{
   background-color: #666841;
-  transform: translateX(1000px);
+  // transform: translateX(1000px);
   transition: all 1.6s ease;
 }
 .owl-item {
@@ -537,21 +539,64 @@
 .owl-next {
   z-index: 20;
 }
-.owl-next {
-  height: 60.4px;
-  width: 60.4px;
-  border-radius: 50%;
-  background-color: $white;
+.carousel_wrap  {
+  height:100%;
+  position:relative;    
+  padding-right: 109px;
+}
+.visual_block {
+  height:100%;
+  position: relative;
+  overflow: hidden;
+}
+.visual_block ul {
+  position: relative;
+}
+.visual_block ul, .visual_block li {
+  height:100%;
+  float: left;
+  position: relative;
+}
+.visual_block li {
+  width:960px;
+}
+.next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 109px;
+  z-index: 15;    
+  background-color: #f0f1f2;
   span {
-    content:"";
-    position: absolute;
-    right: calc(50% - 12px);
-    top: calc(50% - 10.5px);
-    height: 21px;
-    width: 24px;
-    background-image: url(../images/icons/arrow-blue.png);
-    background-repeat: no-repeat;
-    background-size: 24px 21px;
-    background-position: center;
+    height: 60.4px;
+    width: 60.4px;
+    border-radius: 50%;
+    background-color: $white;
+    &:after {
+      content:"";
+      position: absolute;
+      right: calc(50% - 12px);
+      top: calc(50% - 10.5px);
+      height: 21px;
+      width: 24px;
+      background-image: url(../images/icons/arrow-blue.png);
+      background-repeat: no-repeat;
+      background-size: 24px 21px;
+      background-position: center;
+    }
   }
+}
+.carousel_wrap span.next {
+  right:0;
+  background-position:-15px 0;
+}
+.carousel_wrap span.next:hover {
+  background-position:-15px -26px;
+}
+.carousel_wrap span.prev:hover {
+  background-position:0 -26px;
 }
