@@ -102,11 +102,11 @@ function slider(){
 	// var interval = setInterval(chengeLeft, autoChange);
 
 	btnNext.on('click', chengeLeft);	
-	btnPrev.on('click', chengeRigth);	
+	// btnPrev.on('click', chengeRigth);	
 	
-	elWrap.mouseover(function() {
-		clearInterval(interval);
-	});
+	// elWrap.mouseover(function() {
+	// 	clearInterval(interval);
+	// });
 	
 	// elWrap.mouseout(function() {
 	// 	interval = setInterval(chengeLeft, autoChange);
