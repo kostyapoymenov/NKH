@@ -19,37 +19,42 @@
 }
 .acord {
   height: 395px;
+  position: relative;
   .acord__block--one {
     transform: translateY(0);
-    transition: all .5s ease;
+    transition: all .5s linear;
     z-index: 10;
     cursor: pointer;
   }
   .acord__block--two {
-    height: 198px;
-    transition: all .5s ease;
-    z-index: 5;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    left: 0;
+    height: 220px;
+    transition: all .5s linear;
+    z-index: -1;
     transform: translateY(0px);
   }
   .acord__block--three {
-    transform: translateY(0px);
+    transform: translateY(199px);
     z-index: 10;
-    transition: all .5s ease;
+    transition: all .5s linear;
   }
   &--active {
     .acord__block--one {
       transform: translateY(110px);
-      transition: all .5s ease;
+      transition: all .5s linear;
     }
     .acord__block--two {
-      animation: asideHide 500ms 1 ease;
-      transition: all .5s ease;
-      height: 0;
+      animation: asideHide 500ms 1 linear;
+      transition: all .5s linear;
+      height: 50px;
       transform: translateY(110px);
     }
     .acord__block--three {
       transform: translateY(110px);
-      transition: all .5s ease;
+      transition: all .5s linear;
     }
   } 
 }
@@ -565,11 +570,11 @@
 @keyframes asideHide {
   from {
     transform: translateY(0);
-    height:198px;
+    height:230px;
   }
   to {
     transform: translateY(110px);
-    height:0;
+    height:50px;
   }
 }
 @keyframes menuContentShow {
