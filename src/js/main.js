@@ -1,13 +1,3 @@
-$(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
-    items: 1,
-    loop: true,
-    nav: true,
-    touchDrag: false,
-    smartSpeed: 1000
-  });
-});
-
 // открытие меню
 $('.burger').on('click', function(){
   $('.menu').addClass('menu--visible');
@@ -34,33 +24,7 @@ $('.acord__block--one').on('click', function(){
   $('.acord').toggleClass('acord--active');
 });
 
-// $('.slider__wrap').on('click','.owl-next', function(){
-//   var items = $('.slider__wrap').find('.owl-item');
-//   var three = items.eq(2);
-//   var four = items.eq(3);
-
-//   // three.addClass('dop');
-//     if(three.hasClass('active')){
-
-//       console.log('FN1');
-//       four.addClass('dop');
-
-//       setTimeout(function() {
-//         four.removeClass('dop');
-//         console.log('ST1');
-//       }, 800);
-
-//     } else {
-//       three.addClass('dop');
-//       console.log('FN2');
-      
-//       setTimeout(function() {
-//         three.removeClass('dop');
-//         console.log('ST2');
-//       }, 800);
-//     }
-// });
-
+//слайдер
 function slider(){
 	var elWrap = $('.carousel_wrap');
 	var	visual = $('.visual_block');
@@ -68,7 +32,6 @@ function slider(){
 	var	visible = 1;
 		itemWidth = carousel.children().outerWidth(),
 		itemsTotal = carousel.children().length,
-		// autoChange = 5000,
 		btnNext = $('.next span'),
 		btnPrev = $('.prev');
 
@@ -78,38 +41,23 @@ function slider(){
 	
 	function chengeLeft () {
     var item = carousel.children().eq(0);
+    var item2 = carousel.children().eq(1);
 
     btnNext.off('click', chengeLeft);
+    item.addClass('dop');
     
+    carousel.children().addClass('active');
 		carousel.animate({left: -itemWidth}, 500, function() {
-			item.appendTo(carousel);
-			carousel.css({"left": 0 });
-      carousel.children().eq(0).addClass('active');
-			btnNext.on('click', chengeLeft);
-		});
+      item.appendTo(carousel).removeClass('active');
+      setTimeout(function(){
+        item.removeClass('dop');
+      }, 200);
+      carousel.css({"left": 0 });
+      
+    });
+    btnNext.on('click', chengeLeft);
 	}
-	
-	// function chengeRigth () {
-	// 	var item = $(carousel).children().eq(-1);
-	// 	item.prependTo(carousel);
-	// 	carousel.css({"left": -itemWidth});		
-	// 	btnPrev.off('click', chengeRigth);		
-	// 	carousel.animate({left: 0}, 500, function() {
-	// 		btnPrev.on('click', chengeRigth);
-	// 	});
-	// }	
-	
-	// var interval = setInterval(chengeLeft, autoChange);
 
-	btnNext.on('click', chengeLeft);	
-	// btnPrev.on('click', chengeRigth);	
-	
-	// elWrap.mouseover(function() {
-	// 	clearInterval(interval);
-	// });
-	
-	// elWrap.mouseout(function() {
-	// 	interval = setInterval(chengeLeft, autoChange);
-	// });	
+	btnNext.on('click', chengeLeft);	 
 };
 slider();
