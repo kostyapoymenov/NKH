@@ -47,7 +47,7 @@ function slider(){
     item.addClass('dop');
     
     carousel.children().addClass('active');
-		carousel.animate({left: -itemWidth}, 500, function() {
+		carousel.animate({left: -itemWidth}, 800, function() {
       item.appendTo(carousel).removeClass('active');
       setTimeout(function(){
         item.removeClass('dop');
