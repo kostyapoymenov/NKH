@@ -47,14 +47,16 @@ function slider(){
     item.addClass('dop');
     
     carousel.children().addClass('active');
-		carousel.animate({left: -itemWidth}, 800, function() {
+		carousel.animate({left: -itemWidth}, 650, function() {
       item.appendTo(carousel).removeClass('active');
-      setTimeout(function(){
-        item.removeClass('dop');
-      }, 200);
+      // setTimeout(function(){
+      item.removeClass('dop');
+      btnNext.css('pointer-events', 'auto');
+      // }, 650);
       carousel.css({"left": 0 });
       
     });
+    btnNext.css('pointer-events', 'none');
     btnNext.on('click', chengeLeft);
 	}
 
